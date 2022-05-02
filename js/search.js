@@ -58,7 +58,7 @@ if (searchTerm) {
     // Reset the sidebar links so when clicked, they'll clear the search.
     let navLinks = document.getElementsByClassName('nav-link');
     for (let i = 0; i < navLinks.length; i++) {
-        navLinks[i].href = 'docs-page.html' + navLinks[i].getAttribute("href");
+        navLinks[i].href = 'docs.html' + navLinks[i].getAttribute("href");
     }
 }
 
