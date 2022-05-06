@@ -41,7 +41,7 @@ if (searchTerm) {
     if (results.length) {
         results.forEach(function (r) {
             html += "<section class=\"docs-section\">";
-            html += "<h2 class=\"section-heading\"><a href=\"docs.html#" + docs[r.ref].section_id + "\">" + docs[r.ref].section + "</a></h2>";
+            html += "<h2 class=\"section-heading\"><a href=\"docs.php#" + docs[r.ref].section_id + "\">" + docs[r.ref].section + "</a></h2>";
             html += "<p>Article: " + docs[r.ref].article + "</p>";
             //html +=   "<p>" + docs[r.ref].content.substring(0, 300).replace(/([^a-z0-9 ._\-]+)/gi, '') + "</p>";
             html += "<p>" + format(docs[r.ref].content, searchTerm) + "</p>";
@@ -58,7 +58,7 @@ if (searchTerm) {
     // Reset the sidebar links so when clicked, they'll clear the search.
     let navLinks = document.getElementsByClassName('nav-link');
     for (let i = 0; i < navLinks.length; i++) {
-        navLinks[i].href = 'docs.html' + navLinks[i].getAttribute("href");
+        navLinks[i].href = 'docs.php' + navLinks[i].getAttribute("href");
     }
 }
 
